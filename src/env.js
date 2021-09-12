@@ -1,2 +1,2 @@
-const BACKEND_URL = 'http://Comp9900fightbackend1-env.eba-mqgjcvbv.ap-southeast-2.elasticbeanstalk.com';
+const BACKEND_URL = 'http://localhost:8080';
 export { BACKEND_URL }

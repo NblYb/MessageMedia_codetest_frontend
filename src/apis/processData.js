@@ -34,7 +34,7 @@ const processData = (url, method, header, parameterList, body) => {
   };
   if (processing !== null) {
     return processing(url + param)
-      .then((response) => response.data)
+      .then((response) => response)
       .catch((err) => err);
   }
 };
