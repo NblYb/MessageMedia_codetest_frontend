@@ -33,7 +33,6 @@ function MessagePage() {
     setShowTable(false);
     PostMessage(username, JWTToken, value)
       .then(res => {
-        console.log(res);
         message.success('Message sent!');
         setShowTable(true);
       })

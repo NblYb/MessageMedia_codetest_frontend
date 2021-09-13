@@ -10,6 +10,7 @@ const columns = [
     sortDirections: ['ascend'],
     defaultSortOrder: 'ascend',
     width: '20%',
+    responsive: ['md']
   },
   {
     title: 'Message',
@@ -36,12 +37,6 @@ const columns = [
   },
 ];
 
-const getRandomuserParams = params => ({
-  results: params.pagination.pageSize,
-  page: params.pagination.current,
-  ...params,
-});
-
 const MessageTable = () => {
   const [data, setData] = useState([]);
   const [pagination, setPagination] = useState({
@@ -56,7 +51,6 @@ const MessageTable = () => {
     setLoading(true);
     GetMessageHistory(username, JWTToken)
       .then(res => {
-        console.log(res);
         setData(res.data.messages);
         setLoading(false);
       })
